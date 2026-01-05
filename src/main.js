@@ -1,8 +1,6 @@
 import './style.css';
 import { icons } from '@/assets/icons';
 
-// Видео проекта: https://www.youtube.com/watch?v=5m20p_fj1rM
-
 document.addEventListener('DOMContentLoaded', () => {
 	const card = document.querySelector('.card');
 	const searchInput = card.querySelector('.card__input');
@@ -56,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			const imageUrl = `https://openweathermap.org/img/wn/${result.weather[0].icon}@4x.png`;
 
 			image.setAttribute('src', imageUrl);
-			// console.log(result, image);
 			updateValue('city', result.name);
 			updateValue('hum', result.name);
 			updateValue('temp', Math.round(result.main.temp));
@@ -75,6 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	searchBtn.addEventListener('click', () => getWeather(searchInput.value.trim()));
 	searchInput.addEventListener('change', () => getWeather(searchInput.value.trim()));
-
 	init();
 });
