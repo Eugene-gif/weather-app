@@ -2,7 +2,6 @@ import './style.css';
 import { icons } from '@/assets/icons';
 
 // Видео проекта: https://www.youtube.com/watch?v=5m20p_fj1rM
-console.log(import.meta.env.VITE_API_KEY);
 
 document.addEventListener('DOMContentLoaded', () => {
 	const card = document.querySelector('.card');
